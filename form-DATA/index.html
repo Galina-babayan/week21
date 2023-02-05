@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="maincolor" class="form">
+      <form novalidate action="#" id="form" class="form__body">
+        <h2 class="form__tilte">
+          Тоже любите кошек?</h2> <h2 class="form__tilte"> Добро пожаловать на сайт!
+        </h2>
+        
+
+        <div class="form__image">
+          <img onclick="changeMe()" id="mitt_image1" src="./images/cats/main-photo.jpg" alt="">
+        </div>
+        <h3 class="form__subtilte">
+          Пожалуйста, заполните форму регистрации:
+        </h3>
+        <div
+            name="hello-name"
+            id="hello"
+            class="hello-name"
+         ></div>
+        <div
+            name="info"
+            id="nameInfo"
+            class="error"
+         ></div>
+        <div class="form__item">
+          <!-- <label class="form__label" for="formName">*Имя</label> -->
+          <input placeholder="*Имя" onmouseover="colorMeN()" onmouseout="colorMeBackN()" class="form__input" id="formName" type="text" name="name"/>
+        </div>
+        <div class="form__item">
+          <!-- <label class="form__label" for="formName">*Имя</label> -->
+          <input placeholder="*login" onmouseover="colorMeN()" onmouseout="colorMeBackN()" class="form__input" id="formLogin" type="text" name="login"/>
+        </div>
+        <!-- <div class="form__item">
+          <label class="form__label" for="formName">*Имя</label>
+          <input required placeholder="*number" min="9" max="100" onmouseover="colorMeN()" onmouseout="colorMeBackN()" class="form__input" id="formName" type="number" name="name"/>
+        </div> -->
+        <div class="form__item">
+          <!-- <label class="form__label" for="formEmail">*E-mail</label> -->
+          <input   placeholder="*E-mail" onmouseover="colorMeE()" onmouseout="colorMeBackE()" class="form__input" id="formEmail" type="email" name="email"/>
+        </div>
+        <div class="form__item">
+          <!-- <label  class="form__label" for="formPassword">*Пароль</label> -->
+          <input placeholder="*Пароль" onmouseover="colorMeP()" onmouseout="colorMeBackP()" class="form__input" id="formPassword" type="text" name="password"/>
+        </div>
+        <div class="form__item">
+          <!-- <label  class="form__label" for="formPassword">*Пароль</label> -->
+          <input placeholder="*Повторите пароль" onmouseover="colorMeP()" onmouseout="colorMeBackP()" class="form__input" id="formPassword" type="text" name="passwordTwo"/>
+        </div>
+        <div class="form__item">
+          <!-- <label class="form__label" for="formPhone">*Номер телефона</label> -->
+          <input placeholder="*Номер телефона" min="9" max="20" class="form__input" id="formPhone" type="number" name="phone"/>
+        </div>
+        <div class="form__item">
+          <label class="form__label" >Пол
+            <select name="gender">
+              <option value="male">М</option>
+              <option value="female">Ж</option>
+              <option value="unknown">Нет</option>
+            </select>
+          </label>
+        </div>
+        <div class="form__item">
+          <div class="form__label">Есть домашний любимец?</div>
+          <div id="hand" class="options">
+            <div class="options__item">
+              <input
+                id="formRightHanded"
+                class="options__input"
+                type="radio"
+                name="have"
+                value="yes"
+                checked
+              />
+              <label class="options__label" for="formRightHanded"><span>Да, уже есть</span> </label>
+            </div>
+            <div class="options__item">
+              <input
+                id="formLeftHanded"
+                class="options__input"
+                type="radio"
+                name="have"
+                value="no"
+              />
+              <label class="options__label" for="formLeftHanded"><span></span>Нет, собираюсь завести</span></label>
+            </div>
+          </div>
+        </div>
+        <div
+            name="info"
+            id="funInfo"
+            class="error"
+         ></div>
+        <div class="form__item">
+          <label class="form__label" for="formMessage">
+            Какие темы вас интересуют?</label>
+          <textarea
+            name="message"
+            id="formMessage"
+            class="form__input"
+          ></textarea>
+        </div>
+        <div class="form__item">
+          <div class="form__label">Какую породу предпочитаете?:</div>
+          <select onclick="show()" id="breed" class="select" name="cat">
+            
+            <option value="maine coon" >Мейн-кун</option>
+            <option value="bengal">Бенгальская</option>
+            <option value="oriental" >Ориентал</option>
+            <option value="siamese">Сиамская</option>
+            <option value="british shorthair" >Британская короткошерстная</option>
+            <option value="scottish">Шотландская вислоухая</option>
+            <option value="russian blue">Русская голубая</option>
+           
+            <option value="persian">Персидская</option>
+            <option value="nobreed">Дворовая</option>
+          </select>
+          <div id="cat" class="cat">
+            <img id="catImage" src="" alt="">
+          </div>
+        </div>
+        <div class="form__item">
+          <div class="form__label">Хотите поменять цвет фона?</div>
+          <select id="shadeOption" onchange="select()"   class="select" name="color">
+            <option  value="green" >Зеленый</option>
+            <option  value="orange">Оранжевый</option>
+            <option  value="red">Красный</option>
+          </select>
+        </div>
+       
+        <div class="form__item">
+          <div class="checkbox">
+            <input
+              id="formAgreement"
+              type="checkbox"
+              name="agreement"
+              class="checkbox__input"
+              
+            />
+            <label class="checkbox__label" for="formAgreement"
+              ><span> Я согласен с <a href=""> политикой конфиденциальности</a>*</span></label
+            >
+          </div>
+        </div>
+        <div
+            name="info"
+            id="errorInfo"
+            class="error"
+         ></div>
+        
+        <button   class="form__button" type="submit">Отправить</button>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+    
+  </body>
+</html>
